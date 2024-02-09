@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotate Text on Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="200"
+      style="border: 1px solid #d03a3a"
+    ></canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "green";
+
+      ctx.fillText("Satyendra", 50, 50);
+
+      // Rotate the canvas
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate(Math.PI / 2);
+
+      // 'Govind' again (rotated)
+      ctx.fillText("Satyendra", -ctx.measureText("Govind").width / 2, 0);
+    </script>
+  </body>
+</html>

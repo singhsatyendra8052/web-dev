@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    var value;
+    document.writeln(
+      "<h1>Table Creation</h1>" +
+        "<table border='1' width='50%' style='border: greenyellow'; 'border-width: 10px'><tr bgcolor: 'sky blue'>"
+    );
+    for (var i = 1; i <= 20; i++) {
+      value = i;
+      document.writeln("<td>" + value + "</td>");
+      if (i % 5 == 0 && i != 20) {
+        document.writeln("</tr><tr>");
+      }
+    }
+    document.writeln("</tr></table>");
+  </script>
+</html>

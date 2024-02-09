@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concentric Squares</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="concentric-squares"></canvas>
+
+    <script>
+      const canvas = document.getElementById("concentric-squares");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = 800;
+      canvas.height = 800;
+
+      function drawConcentricSquares(numSquares, baseSize) {
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        for (let i = 0; i < numSquares; i++) {
+          const x = centerX - baseSize / 2 - i * 10;
+          const y = centerY - baseSize / 2 - i * 10;
+          const size = baseSize + i * 20;
+
+          ctx.strokeRect(x, y, size, size);
+        }
+      }
+
+      drawConcentricSquares(15, 30);
+    </script>
+  </body>
+</html>
