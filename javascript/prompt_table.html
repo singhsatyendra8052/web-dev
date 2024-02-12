@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prompt</title>
+  </head>
+  <body>
+    <div id="h"></div>
+  </body>
+  <script type="text/javascript">
+    document.writeln("<h1>hello</h1>");
+    var a1, a2;
+    var a1 = prompt("Enter the number");
+    var a2 = prompt("Enter the number");
+    a1 = parseInt(a1);
+    a2 = parseInt(a2);
+    console.log(a1 + a2);
+    var sum = a1 + a2;
+    document.writeln("<h1>the number is " + sum + " </h1>");
+    const c = document.getElementById("h");
+    c.innerHTML = sum;
+  </script>
+</html>
