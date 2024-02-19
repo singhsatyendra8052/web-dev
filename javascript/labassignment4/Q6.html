@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <script>
+    function sum(){
+        const a=document.getElementById("first").value;
+        const b=document.getElementById("second").value;
+        const elem=document.getElementById("finalsum");
+        elem.innerHTML=parseInt(a)+parseInt(b);
+    }
+    function multi(){
+        const a=document.getElementById("first").value;
+        const b=document.getElementById("second").value;
+        const elem=document.getElementById("finalsum");
+        elem.innerHTML=parseInt(a)*parseInt(b);
+    }
+    function minus(){
+        const a=document.getElementById("first").value;
+        const b=document.getElementById("second").value;
+        const elem=document.getElementById("finalsum");
+        elem.innerHTML=parseInt(a)-parseInt(b);
+    }
+    function div(){
+        const a=document.getElementById("first").value;
+        const b=document.getElementById("second").value;
+        const elem=document.getElementById("finalsum");
+        elem.innerHTML=parseInt(a)/parseInt(b);
+ 
+    }
+    function per(){
+    const a=document.getElementById("first").value;
+    const b=document.getElementById("second").value;
+    const elem=document.getElementById("finalsum");
+    elem.innerHTML=parseInt(a)/parseInt(b)*100;
+ 
+    }
+    
+</script>
+  <body>
+    <center>
+        <h2 id="ghead" ><u>Simple Calculator</u></h2><br></br>
+    <input  id="first" type="text" placeholder="first num">
+    <br></br>
+    <input  id="second" type="text" placeholder="second"><br></br>
+    <button onclick="sum()">sum</button><br></br>
+    <button onclick="multi()">multi</button><br></br>
+    <button onclick="minus()">minus</button><br></br>
+    <button onclick="div()">div</button><br></br>
+    <button onclick="per()">Percentage</button><br></br>
+    <div id= "finalsum">
+    </div>
+
+    </center>
+    <br>
+
+
+  </body>
+</html>

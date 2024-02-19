@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Group Checker</title>
+    <style>
+      body {
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter the age</h1>
+    <label for="ageInput">Enter your age:</label>
+    <input type="text" id="ageInput" placeholder="Enter your age" />
+    <button onclick="checktheAge()">Check Age Group</button>
+    <div id="result"></div>
+
+    <script>
+      function checktheAge() {
+        const ageInput = document.getElementById("ageInput").value;
+
+        const age = parseInt(ageInput);
+
+        if (isNaN(age)) {
+          document.getElementById("result").innerText =
+            "Please enter a valid age.";
+          return;
+        }
+
+        let ageGroup;
+        if (age >= 0 && age <= 12) {
+          ageGroup = "Child";
+        } else if (age >= 13 && age <= 19) {
+          ageGroup = "Teenage";
+        } else if (age >= 20 && age <= 40) {
+          ageGroup = "Young";
+        } else {
+          ageGroup = "Senior citizen";
+        }
+
+        document.getElementById("result").innerText =
+          "Your age group is: " + ageGroup;
+      }
+    </script>
+  </body>
+</html>

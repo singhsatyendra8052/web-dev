@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: azure;
+        font-style: italic;
+      }
+      h1 {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <h1>Enter the String</h1>
+  <script>
+    function rev() {
+      const str = document.getElementById("data").value;
+      const len = str.length;
+      let ans = "";
+      for (let i = len - 1; i >= 0; i--) {
+        ans += str[i];
+      }
+      const elem = document.getElementById("ans");
+      elem.innerHTML = "Reversed string: " + ans;
+    }
+  </script>
+  <body>
+    <input id="data" type="text" placeholder="Enter the String" />
+    <button onclick="rev()">Click for reverse string</button>
+    <div id="ans"></div>
+  </body>
+</html>

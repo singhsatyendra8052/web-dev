@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-style: italic;
+      }
+      body {
+        background-color: rgb(142, 132, 120);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter the size of the array</h1>
+    <br />
+    <input id="size" type="text" placeholder="Number of elements" />
+    <button onclick="sum()">Click for sum</button>
+    <div id="ans"></div>
+    <br />
+
+    <script>
+      function sum() {
+        const sizeInput = document.getElementById("size").value;
+        const size = parseInt(sizeInput);
+        if (isNaN(size) || size <= 0) {
+          alert("Please enter a valid positive number for the size.");
+          return;
+        }
+
+        const arr = [];
+        for (let i = 0; i < size; i++) {
+          const element = prompt("Enter element " + (i + 1) + ":");
+          const num = parseFloat(element);
+          if (isNaN(num)) {
+            alert("Invalid input. Please enter a valid number.");
+            return;
+          }
+          arr.push(num);
+        }
+
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+
+        const elem = document.getElementById("ans");
+        elem.innerHTML = "Sum: " + sum;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function prim() {
+      const a = parseInt(document.getElementById("data").value);
+      let s = "";
+
+      for (let i = 2; i < a; i++) {
+        let flag = 0;
+        for (let j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            flag++;
+          }
+        }
+        if (flag == 2) {
+          s += i + " ";
+        }
+      }
+      const elem = document.getElementById("ans1");
+      elem.innerHTML = "Prime numbers are: " + s;
+    }
+  </script>
+  <body>
+    <h1>Enter the Number</h1>
+    <br />
+    <input id="data" type="text" placeholder="Enter the number" />
+    <button onclick="prim()">Click for prime numbers</button>
+    <div id="ans1"></div>
+  </body>
+</html>
