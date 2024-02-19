@@ -62,6 +62,7 @@ function clearShoppingListEl() {
 function clearInputFieldEl() {
   inputFieldEl.value = "";
 }
+var int;
 //function to append new element in the list and update that in the database
 function appendItemToShoppingListEl(item) {
   let itemID = item[0];
