@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+  </head>
+  <body>
+    <p>click to change</p>
+    <div onclick="change()" id="event1">India is my country</div>
+    <script>
+      function change() {
+        let str = document.getElementById("event1").innerHTML;
+        var a = str.split(" ");
+        var c = "motherland";
+        var b = " ";
+        for (i = 0; i < a.length; i++) {
+          if (a[i] == "country") {
+            b += c + " ";
+          } else {
+            b += a[i] + " ";
+          }
+        }
+        document.writeln(b);
+      }
+      //   let str = document.getElementById("event1").innerHTML;
+      //   var a = str.split(" ");
+      //   var c = "motherland";
+      //   var b = " ";
+      //   for (i = 0; i < a.length; i++) {
+      //     if (a[i] == "country") {
+      //       b += c + " ";
+      //     } else {
+      //       b += a[i] + " ";
+      //     }
+      //   }
+      //   document.writeln(b);
+
+      // t.innerHTML = "india";
+    </script>
+  </body>
+</html>

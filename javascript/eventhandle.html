@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Functions</title>
+  </head>
+
+  <body>
+    <p onclick="changecolor()" cla="text">
+      When you enter the input field, a function is triggered which sets the
+      background color to green. When you leave the input field, a function is
+      triggered which sets the background color to blue and clicking on the p
+      tag change its color.
+    </p>
+
+    <label for="">Enter your name: </label>
+    <input
+      type="text"
+      id="myInput"
+      class="hi"
+      onfocus="focusFunction()"
+      onblur="blurFunction()"
+    />
+
+    <script>
+      function focusFunction() {
+        document.getElementById("myInput").style.backgroundColor = "green";
+      }
+
+      function blurFunction() {
+        document.getElementById("myInput").style.backgroundColor = "blue";
+      }
+      function changecolor() {
+        document.getElementsByClassName("text").style.backgroundColor = "cyan";
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handlers</title>
+  </head>
+  <body>
+    <h1>Event Handlers Demo</h1>
+
+    <button onclick="elementHandler()">Get access by element</button>
+
+    <br /><br />
+
+    <button id="idButton">Get access by ID</button>
+
+    <br /><br />
+
+    <button class="highlightClass">Get access by class</button>
+
+    <script>
+      function elementHandler() {
+        alert("Element Clicked!");
+      }
+
+      document.getElementById("idButton").onclick = function () {
+        alert("ID Button Clicked!");
+      };
+
+      document.getElementsByClass("highlightClass").onclick = function () {
+        alert("Class Button Clicked!");
+      };
+    </script>
+  </body>
+</html>
