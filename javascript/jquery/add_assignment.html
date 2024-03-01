@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Element to Unordered List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div style="color: rgb(8, 35, 25)">
+      <h2>Add Element to the Unordered List</h2>
+      <input type="text" id="newItem" placeholder="Enter new item" />
+      <button id="addBtn">Add Item</button>
+
+      <ul id="itemList">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#addBtn").click(function () {
+          var newItemText = $("#newItem").val();
+          if (newItemText.trim() !== "") {
+            $("#itemList").append("<li>" + newItemText + "</li>");
+            $("#newItem").val("");
+          } else {
+            alert("Please enter a valid item text!");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

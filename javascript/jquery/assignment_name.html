@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Full Name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <div style="padding: 230px; color: rgb(101, 91, 91)">
+        <h2>Enter Your First and Last Name</h2>
+        <form id="nameForm">
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+          /><br /><br />
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+          /><br /><br />
+          <button type="button" id="show">Show Name</button>
+        </form>
+      </div>
+
+      <div id="fullName"></div>
+    </center>
+
+    <script>
+      $(document).ready(function () {
+        $("#show").click(function () {
+          var firstName = $("#firstName").val();
+          var lastName = $("#lastName").val();
+          var fullName = firstName + " " + lastName;
+          $("#fullName").text("Your Full Name: " + fullName);
+        });
+      });
+    </script>
+  </body>
+</html>

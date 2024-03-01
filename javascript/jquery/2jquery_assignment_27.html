@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression Example</title>
+    <script>
+      function validateRange() {
+        const userInput = document.getElementById("userInput1").value;
+        const userIn = document.getElementById("userInput1");
+
+        // 1. Matching a Range of Characters (a-z, A-Z, 0-9)
+        const pattern1 = /[a-zA-Z0-9]/;
+        const isValid1 = pattern1.test(userInput);
+
+        document.getElementById(
+          "result1"
+        ).textContent = `Pattern 1 (Range of Characters): ${isValid1}`;
+        userIn.value = "";
+      }
+      function validateEmail() {
+        const userInput = document.getElementById("userInput2").value;
+        const userIn = document.getElementById("userInput2");
+
+        // 2. Validate an email address
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const isValidEmail = emailPattern.test(userInput);
+
+        // Display results
+
+        document.getElementById(
+          "result2"
+        ).textContent = `Valid Email Address: ${isValidEmail}`;
+        userIn.value = "";
+      }
+      function validateInput() {
+        const userInput = document.getElementById("userInput3").value;
+        const userIn = document.getElementById("userInput3");
+
+        // 3. Match a word starting with "a" and ending with "e"
+        const wordPattern = /\b[aA][a-zA-Z]*[eE]\b/;
+        const isValidWord = wordPattern.test(userInput);
+
+        document.getElementById(
+          "result3"
+        ).textContent = `Word starting with "a" and ending with "e": ${isValidWord}`;
+        userIn.value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <center style="color: blueviolet">
+      <p>For matching the input for range a-z, A-Z, 0-9</p>
+      <input type="text" id="userInput1" placeholder="Enter text" />
+      <button onclick="validateRange()">Validate</button>
+      <p id="result1"></p>
+      <br />
+      <p>Enter the text for matching to Email</p>
+      <input type="text" id="userInput2" placeholder="Enter text" />
+      <button onclick="validateEmail()">Validate</button>
+      <p id="result2"></p>
+      <br />
+      <p>Enter the text for matching with starting with a and wnding with e</p>
+      <input type="text" id="userInput3" placeholder="Enter text" />
+      <button onclick="validateInput()">Validate</button>
+
+      <p id="result3"></p>
+    </center>
+  </body>
+</html>

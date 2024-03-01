@@ -10,14 +10,29 @@
         font-style: italic;
         text-align: center;
         padding-top: 50px;
-        background-color: rgb(226, 181, 127);
+        background-color: rgb(216, 215, 213);
+      }
+      input {
+        border-radius: 5px;
+        padding: 2px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      button {
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 32px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
       }
       form {
         margin-bottom: 20px;
       }
       label {
-        color: rgb(104, 14, 14);
+        color: rgb(30, 14, 14);
         font-style: italic;
+      }
+      input:hover,
+      button:hover {
+        box-shadow: 4px 4px 8px rgba(11, 11, 11, 0.9);
       }
     </style>
   </head>
@@ -43,6 +58,7 @@
       <input type="number" id="subject5" required /><br /><br />
 
       <button type="button" onclick="calculateGrade()">Calculate Grade</button>
+      <button type="button" onclick="reset()">Reset</button>
     </form>
 
     <div id="result"></div>
@@ -80,6 +96,13 @@
         result += "Grade: " + grade;
 
         document.getElementById("result").innerHTML = result;
+      }
+      function reset() {
+        document.getElementById(subject1).value = "";
+        document.getElementById(subject2).value = "";
+        document.getElementById(subject3).value = "";
+        document.getElementById(subject4).value = "";
+        document.getElementById(subject5).value = "";
       }
     </script>
   </body>

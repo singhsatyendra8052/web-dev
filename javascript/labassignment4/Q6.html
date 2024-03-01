@@ -4,59 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <style>
+      /* #but {
+        display: inline;
+        background-color: rgb(43, 22, 22);
+      } */
+      body {
+        background-color: rgb(239, 244, 244);
+      }
+      input {
+        margin: 20px;
+        padding: 5px;
+
+        border-color: rgb(114, 111, 111);
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      button {
+        color: rgb(2, 12, 12);
+        margin: 10px;
+        background-color: rgb(235, 229, 229);
+        border-radius: 5px;
+        padding: 2px 10px 2px 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      input:hover,
+      button:hover {
+        box-shadow: 4px 4px 8px rgba(11, 11, 11, 0.9);
+      }
+    </style>
   </head>
   <script>
-    function sum(){
-        const a=document.getElementById("first").value;
-        const b=document.getElementById("second").value;
-        const elem=document.getElementById("finalsum");
-        elem.innerHTML=parseInt(a)+parseInt(b);
+    function sum() {
+      const a = document.getElementById("first").value;
+      const b = document.getElementById("second").value;
+      const elem = document.getElementById("finalsum");
+      elem.innerHTML =
+        "<p>" + "Sum is : " + " </p>" + parseInt(a) + parseInt(b);
     }
-    function multi(){
-        const a=document.getElementById("first").value;
-        const b=document.getElementById("second").value;
-        const elem=document.getElementById("finalsum");
-        elem.innerHTML=parseInt(a)*parseInt(b);
+    function multi() {
+      const a = document.getElementById("first").value;
+      const b = document.getElementById("second").value;
+      const elem = document.getElementById("finalsum");
+      elem.innerHTML =
+        "<p>" + "Multiplication is : " + " </p>" + parseInt(a) * parseInt(b);
     }
-    function minus(){
-        const a=document.getElementById("first").value;
-        const b=document.getElementById("second").value;
-        const elem=document.getElementById("finalsum");
-        elem.innerHTML=parseInt(a)-parseInt(b);
+    function minus() {
+      const a = document.getElementById("first").value;
+      const b = document.getElementById("second").value;
+      const elem = document.getElementById("finalsum");
+      elem.innerHTML =
+        "<p>" + "Substraction is : " + " </p>" + parseInt(a) - parseInt(b);
     }
-    function div(){
-        const a=document.getElementById("first").value;
-        const b=document.getElementById("second").value;
-        const elem=document.getElementById("finalsum");
-        elem.innerHTML=parseInt(a)/parseInt(b);
- 
+    function div() {
+      const a = document.getElementById("first").value;
+      const b = document.getElementById("second").value;
+      const elem = document.getElementById("finalsum");
+      elem.innerHTML =
+        "<p>" + "Division is : " + " </p>" + parseInt(a) / parseInt(b);
     }
-    function per(){
-    const a=document.getElementById("first").value;
-    const b=document.getElementById("second").value;
-    const elem=document.getElementById("finalsum");
-    elem.innerHTML=parseInt(a)/parseInt(b)*100;
- 
+    function reset() {
+      document.getElementById("first").value = "";
+      document.getElementById("second").value = "";
     }
-    
-</script>
+  </script>
   <body>
     <center>
-        <h2 id="ghead" ><u>Simple Calculator</u></h2><br></br>
-    <input  id="first" type="text" placeholder="first num">
-    <br></br>
-    <input  id="second" type="text" placeholder="second"><br></br>
-    <button onclick="sum()">sum</button><br></br>
-    <button onclick="multi()">multi</button><br></br>
-    <button onclick="minus()">minus</button><br></br>
-    <button onclick="div()">div</button><br></br>
-    <button onclick="per()">Percentage</button><br></br>
-    <div id= "finalsum">
-    </div>
+      <h2 id="ghead"><u>Simple Calculator</u></h2>
 
+      <input id="first" type="text" placeholder="first num" />
+      <br />
+      <input id="second" type="text" placeholder="second" /><br />
+      <div id="but">
+        <button onclick="sum()">sum</button><br />
+        <button onclick="multi()">multi</button><br />
+        <button onclick="minus()">minus</button><br />
+        <button onclick="div()">div</button><br />
+        <button onclick="reset()">reset</button><br />
+      </div>
+      <div id="finalsum"></div>
     </center>
-    <br>
-
-
+    <br />
   </body>
 </html>

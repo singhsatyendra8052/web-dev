@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Example</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <p id="ins">
+        This is the first existing after which new p will be inserted using
+        after of jquery.
+      </p>
+      <p id="red">This paragraph has class "red".</p>
+      <button id="toggleButton">Toggle List Items</button>
+      <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <div id="hiddenElement">This element will be hidden on hover.</div>
+    </center>
+
+    <script>
+      $(document).ready(function () {
+        // 1. Add a new paragraph after the first existing paragraph
+        $("<p>New paragraph added after p tag one.</p>").insertAfter("#ins");
+
+        // 2. Change background color of all paragraphs with class "red" on click
+        $("#red").on("click", function () {
+          $(this).css("background-color", "red");
+        });
+
+        // 3. Hide the element with ID "hiddenElement" on hover
+        $("#hiddenElement").hover(function () {
+          $(this).hide();
+        });
+
+        // 4. Toggle visibility of list items on button click
+        $("#toggleButton").on("click", function () {
+          $("#myList li").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
